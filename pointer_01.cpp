@@ -1,3 +1,7 @@
+/*
+pointer_01.cpp by capncruncky - github.com/capncruncky
+*/
+
 #include <iostream>
 #include <cstring>
 
