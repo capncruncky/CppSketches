@@ -1,4 +1,8 @@
-//This program will be convert a MAC address
+/*
+MAC_conv-v0.0.1 - Programmed by capncruncky
+This program is designed to be a simple CLI MAC address conversion tool
+github.com/capncruncky/CppSketches
+*/
 
 #include <iostream>
 #include <string>
