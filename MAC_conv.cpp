@@ -24,15 +24,35 @@ int main(int argc, const char *argv[])
   {
     if (argv[1][1] == 'd')
     {
-      std::cout << "Converting to decimal ...\n";
+      //std::cout << "Converting to decimal ...\n";
       std::string rawMAC = cleanMAC(argv[2]);
+
+      //Check for valid MAC address
+      if (rawMAC.length() != 12)
+      {
+        std::cout << "Too many characters. Please enter valid MAC address" << "\n";
+        return 1;   //exit to OS
+      }
+
+      //If ok, continue conversion...
       deciMAC(rawMAC);
+
     }
     else if (argv[1][1] == 'h')
     {
-      std::cout << "Converting hexadecimal to decimal...\n";
+      //std::cout << "Converting hexadecimal to decimal...\n";
       std::string rawMAC = cleanMAC(argv[2]);
+
+      //Check for valid MAC address
+      if (rawMAC.length() != 12)
+      {
+        std::cout << "Invalid MAC address \nPlease enter valid MAC address" << "\n";
+        return 1;   //exit to OS
+      }
+
+      //If ok, continue conversion...
       hexaMAC(rawMAC);
+
     }
     else
     {
@@ -68,7 +88,7 @@ std::string cleanMAC(std::string macAddress)
       it = macAddress.erase(it); //erase, return pointer to it
     }
   }
-  //std::cout << "Converting decimal to hexadecimal...\n";
+
   return macAddress;
 }
 
